@@ -2,18 +2,18 @@
 
 namespace kata1
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("[{0}]", string.Join(", ", SplitString("ahojda")));
-            Console.WriteLine("[{0}]", string.Join(", ", SplitString("liska")));
+            Console.WriteLine("[{0}]", string.Join(", ", StringSplit("ahojda")));
+            Console.WriteLine("[{0}]", string.Join(", ", StringSplit("liska")));
             Console.ReadLine();
         }
-        public static string[] SplitString(string str)
+        public static string[] StringSplit(string str)
         {
-            int a = 0;
             bool odd = false;
+            int a;
             if (str.Length % 2 == 0)
             {
                 a = str.Length / 2;
